@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask Ashley on a Date</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="background-music" src="your-music-file.mp3" loop></audio>
+    <div id="container">
+        <!-- Play/Pause Button -->
+        <button id="music-control" onclick="toggleMusic()">Play Music</button>
+        
+        <!-- Asking Date Section (GIF will change dynamically) -->
+        <div id="ask-date" class="section">
+            <img id="ask-date-gif" src="giphy1.gif" alt="Asking Date GIF" class="circular-img">
+            <p>Would you like to go on a date with me, Ashley?</p>
+            <button onclick="handleResponse(true)">Yes</button>
+            <button onclick="handleResponse(false)">No</button>
+        </div>
+
+        <!-- Begging Section -->
+        <div id="begging" class="section hidden">
+            <img src="giphy2.gif" alt="Begging GIF" class="circular-img">
+            <p>Please take me on a date! 😭</p>
+            <button onclick="goToNextForm()">please, sige na 🥺</button>
+        </div>
+
+        <!-- Food Selection Form -->
+        <div id="food-selection" class="section hidden">
+            <h2>What would you like to eat or drink?</h2>
+            <div class="choices">
+                <button onclick="selectFood('Ice Cream')">
+                    <img src="ice-cream.jpg" alt="Ice Cream">
+                </button>
+                <button onclick="selectFood('Iced Coffee')">
+                    <img src="iced-coffee.jpg" alt="Iced Coffee">
+                </button>
+                <button onclick="selectFood('Iced Tea')">
+                    <img src="iced-tea.jpg" alt="Iced Tea">
+                </button>
+                <button onclick="selectFood('Sisig')">
+                    <img src="sisig.jpg" alt="Sisig">
+                </button>
+                <button onclick="selectFood('BBQ with Rice')">
+                    <img src="bbq-rice.jpg" alt="BBQ with Rice">
+                </button>
+                <button onclick="selectFood('Pizza')">
+                    <img src="pizza.jpg" alt="Pizza">
+                </button>
+            </div>
+            <button onclick="goToDateSelection()">Proceed</button>
+        </div>
+
+        <!-- Date Time Selection -->
+        <div id="date-selection" class="section hidden">
+            <h2>Choose a Date and Time:</h2>
+            <input type="date" id="date" required>
+            <input type="time" id="time" required>
+            <button onclick="confirmDate()">Confirm</button>
+        </div>
+
+        <!-- Confirmation -->
+        <div id="confirmation" class="section hidden">
+            <img src="giphy3.gif" alt="See You Soon GIF" class="circular-img1">
+            <h2>See you on <span id="selected-date-time"></span>, Ashley!</h2>
+            <p>We're having <span id="selected-food"></span>!</p>
+        </div>
+
+        <!-- Heart Animations -->
+        <div class="hearts">
+            <span class="heart">❤</span>
+            <span class="heart">❤</span>
+            <span class="heart">❤</span>
+            <span class="heart">❤</span>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

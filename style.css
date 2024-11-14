@@ -1,0 +1,172 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Body Style */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff0f5; /* Light reddish background */
+    color: #b22222; /* Reddish text */
+}
+
+/* Container Style */
+#container {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Section Visibility */
+.section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Circular Image Style */
+.circular-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Circular Image Style */
+.circular-img1 {
+    width: 170px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    }
+
+/* Static GIF Style */
+#static-gif {
+    position: fixed;
+    bottom: 80px; /* Positioned slightly above the play button */
+    left: 20px;
+    z-index: 100; /* Ensures it stays above most elements */
+}
+
+/* General Button Style */
+button {
+    margin: 10px;
+    padding: 12px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #b22222; /* Reddish background */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #d32f2f;
+}
+
+/* Choices Image Button Style */
+.choices button {
+    background-color: transparent;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+/* Image inside Choices Button */
+.choices button img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid #ff7f7f; /* Light pink border */
+    transition: border 0.3s;
+}
+
+/* Selected Food Choice */
+.choices button.selected img {
+    border-color: #b22222; /* Darker red for selected choice */
+}
+
+/* Hover Effect on Choices */
+.choices button:hover img {
+    transform: scale(1.1);
+    border-color: #d32f2f;
+}
+
+/* Input Date and Time */
+input[type="date"],
+input[type="time"] {
+    padding: 10px;
+    font-size: 16px;
+    margin: 10px;
+    width: 100%;
+}
+
+/* Play/Pause Music Button */
+#music-control {
+    position: fixed;
+    bottom: 20px;
+    left: 20px; /* Positioned near the bottom left */
+    padding: 10px 15px;
+    background-color: #ff7f7f; /* Light pink */
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1000; /* Ensures it stays on top */
+    transition: background 0.3s;
+}
+
+#music-control:hover {
+    background-color: #d32f2f;
+}
+
+/* Heart Animations */
+.hearts {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.heart {
+    position: absolute;
+    color: #ff6b6b;
+    font-size: 24px;
+    animation: float 4s infinite;
+    opacity: 0.8;
+}
+
+/* Floating Hearts Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Heart Positioning */
+.heart:nth-child(1) { left: 20%; animation-delay: 0s; }
+.heart:nth-child(2) { left: 40%; animation-delay: 1s; }
+.heart:nth-child(3) { left: 60%; animation-delay: 2s; }
+.heart:nth-child(4) { left: 80%; animation-delay: 3s; }
